@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Javier Páramo | Senior iOS Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { darkBg: '#020617' }
+                }
+            }
+        }
+        function toggleDarkMode() { document.documentElement.classList.toggle('dark'); }
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-es]').forEach(el => {
+                el.innerHTML = lang === 'es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+            });
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <style>
+        .gradient-text { background: linear-gradient(90deg, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-custom { @apply bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-8 rounded-[2.5rem] transition-all duration-500 hover:shadow-2xl hover:scale-[1.01]; }
+        .featured-card { @apply border-blue-500/40 bg-gradient-to-br from-blue-50/50 to-white dark:from-blue-900/20 dark:to-slate-900/50; }
+        .tech-badge { @apply px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-[11px] font-mono uppercase tracking-wider; }
+    </style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-300 transition-colors duration-300 font-sans antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-8 py-5 flex justify-between items-center">
+            <span class="text-2xl font-black gradient-text tracking-tighter">FP.ARCH</span>
+            <div class="flex items-center space-x-6">
+                <div class="flex bg-slate-100 dark:bg-slate-800 rounded-xl p-1 text-[10px] font-bold shadow-inner">
+                    <button onclick="setLanguage('es')" class="px-4 py-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 transition">ES</button>
+                    <button onclick="setLanguage('en')" class="px-4 py-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 transition">EN</button>
+                </div>
+                <button onclick="toggleDarkMode()" class="text-xl px-2 hover:rotate-12 transition-transform">
+                    <i class="fas fa-sun dark:hidden text-orange-500"></i>
+                    <i class="fas fa-moon hidden dark:block text-blue-400"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-8 py-20 md:py-28" data-aos="fade-up">
+        <h1 class="text-6xl md:text-8xl font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight">
+            Francisco Javier <br><span class="gradient-text">Páramo Muñoz</span>
+        </h1>
+        <p class="text-2xl md:text-3xl text-slate-500 dark:text-slate-400 font-light max-w-3xl" 
+           data-es="Arquitecto iOS Senior especializado en seguridad bancaria y entornos críticos."
+           data-en="Senior iOS Architect specialized in banking security and critical environments.">
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-8 space-y-20 pb-32">
+        
+        <section>
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4" data-aos="fade-right">
+                <span data-es="Experiencia Profesional" data-en="Professional Experience"></span>
+                <span class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-custom featured-card md:col-span-2" data-aos="zoom-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <h3 class="text-4xl font-black text-blue-600 dark:text-blue-400">BBVA Technologies</h3>
+                                <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase animate-pulse" data-es="Actual" data-en="Current"></span>
+                            </div>
+                            <p class="text-2xl font-bold dark:text-white" data-es="Senior iOS Architect & Seguridad" data-en="Senior iOS Architect & Security"></p>
+                        </div>
+                        <div class="mt-4 md:mt-0 px-6 py-3 bg-blue-600/10 dark:bg-blue-400/10 rounded-2xl border border-blue-500/20">
+                            <span class="text-sm font-mono font-black text-blue-600 dark:text-blue-400 underline decoration-2">FEB 2023 — PRES.</span>
+                        </div>
+                    </div>
+                    <p class="mb-6 text-xl text-slate-600 dark:text-slate-400 leading-relaxed" 
+                       data-es="Liderazgo en infraestructura móvil del grupo. Gestión de XML Pinning, CI/CD pipelines y administración de certificados Enterprise."
+                       data-en="Group mobile infrastructure leadership. XML Pinning management, CI/CD pipelines, and Enterprise certificate administration."></p>
+                    <div class="flex flex-wrap gap-2"><span class="tech-badge">Swift 5</span><span class="tech-badge">XML Pinning</span><span class="tech-badge">CI/CD</span></div>
+                </div>
+
+                <div class="card-custom" data-aos="fade-up">
+                    <div class="flex justify-between mb-4">
+                        <h3 class="font-bold text-2xl">Grupo Oesia (AEAT)</h3>
+                        <span class="text-xs font-mono opacity-50 italic">2019 — 2022</span>
+                    </div>
+                    <p class="text-blue-500 font-bold mb-4 text-sm uppercase">Analista-Programador iOS</p>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-600 dark:text-slate-400" 
+                       data-es="Análisis y desarrollo en el DIT de la Agencia Tributaria. Liderazgo en App Renta y Clave PIN. Automatización con Fastlane."
+                       data-en="Analysis and development at Tax Agency. Leadership in 'Renta' and 'Clave PIN' apps. Fastlane automation."></p>
+                    <div class="flex flex-wrap gap-2"><span class="tech-badge">xCode</span><span class="tech-badge">Alamofire</span><span class="tech-badge">Fastlane</span></div>
+                </div>
+
+                <div class="card-custom" data-aos="fade-up">
+                    <div class="flex justify-between mb-4">
+                        <h3 class="font-bold text-2xl">Hasten Group (Indra)</h3>
+                        <span class="text-xs font-mono opacity-50 italic">2018 — 2019</span>
+                    </div>
+                    <p class="text-blue-500 font-bold mb-4 text-sm uppercase">Analista-Programador iOS</p>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-600 dark:text-slate-400" 
+                       data-es="Desarrollo de apps electorales oficiales para Andalucía y Madrid. Integración con Swagger y arquitecturas reactivas."
+                       data-en="Official electoral apps development for Andalusia and Madrid. Swagger integration and reactive architectures."></p>
+                    <div class="flex flex-wrap gap-2"><span class="tech-badge">RxSwift</span><span class="tech-badge">Swagger</span><span class="tech-badge">Macaw</span></div>
+                </div>
+
+                <div class="card-custom" data-aos="fade-up">
+                    <div class="flex justify-between mb-4">
+                        <h3 class="font-bold text-2xl">Diusframi (DID)</h3>
+                        <span class="text-xs font-mono opacity-50 italic">2015 — 2018</span>
+                    </div>
+                    <p class="text-blue-500 font-bold mb-4 text-sm uppercase">Programador Senior iOS</p>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-600 dark:text-slate-400" 
+                       data-es="Desarrollo y mantenimiento evolutivo de apps nativas. Migraciones de Objective-C a Swift 3. Liderazgo de equipo iOS."
+                       data-en="Native app development and maintenance. Migrations from Objective-C to Swift 3. iOS team leadership."></p>
+                    <div class="flex flex-wrap gap-2"><span class="tech-badge">Objective-C</span><span class="tech-badge">Swift 3</span><span class="tech-badge">Telerik</span></div>
+                </div>
+
+                <div class="card-custom" data-aos="fade-up">
+                    <div class="flex justify-between mb-4">
+                        <h3 class="font-bold text-2xl">New Goat S.L.</h3>
+                        <span class="text-xs font-mono opacity-50 italic">2012 — 2015</span>
+                    </div>
+                    <p class="text-blue-500 font-bold mb-4 text-sm uppercase" data-es="Programador Fullstack" data-en="Fullstack Developer"></p>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-600 dark:text-slate-400" 
+                       data-es="Apps nativas iOS, páginas web en PHP (Codeigniter), servicios REST y desarrollo híbrido con PhoneGap."
+                       data-en="Native iOS apps, PHP websites (Codeigniter), REST services, and hybrid PhoneGap development."></p>
+                    <div class="flex flex-wrap gap-2"><span class="tech-badge">PHP</span><span class="tech-badge">PhoneGap</span><span class="tech-badge">MySQL</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stack">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4" data-aos="fade-right">
+                <span data-es="Stack Tecnológico" data-en="Tech Stack"></span>
+                <span class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-custom text-center group" data-aos="zoom-in">
+                    <div class="w-20 h-20 bg-blue-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-500 transition-all duration-500 group-hover:text-white">
+                        <i class="fas fa-mobile-screen-button text-4xl text-blue-500 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Mobile Core</h4>
+                    <p class="text-xs text-slate-500 font-mono">Swift, Objective-C, Java</p>
+                </div>
+                <div class="card-custom text-center group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-emerald-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-500 transition-all duration-500 group-hover:text-white">
+                        <i class="fas fa-server text-4xl text-emerald-500 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Backend & Data</h4>
+                    <p class="text-xs text-slate-500 font-mono">PHP, SQL Oracle, MySQL</p>
+                </div>
+                <div class="card-custom text-center group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-orange-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-all duration-500 group-hover:text-white">
+                        <i class="fas fa-infinity text-4xl text-orange-500 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">DevOps</h4>
+                    <p class="text-xs text-slate-500 font-mono">Fastlane, CI/CD, GitFlow</p>
+                </div>
+                <div class="card-custom text-center group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-purple-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-500 transition-all duration-500 group-hover:text-white">
+                        <i class="fas fa-shield-halved text-4xl text-purple-500 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Security</h4>
+                    <p class="text-xs text-slate-500 font-mono">XML Pinning, Certificates</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-4" data-aos="fade-right">
+                <span data-es="Formación" data-en="Education"></span>
+                <span class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-custom flex items-center gap-6" data-aos="fade-up">
+                    <div class="p-4 bg-purple-500/10 rounded-2xl text-purple-500"><i class="fas fa-graduation-cap text-2xl"></i></div>
+                    <div><p class="font-bold">CFGS Aplicaciones Informáticas</p><p class="text-xs opacity-60">Salesianos (2010-2012)</p></div>
+                </div>
+                <div class="card-custom flex items-center gap-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-purple-500/10 rounded-2xl text-purple-500"><i class="fas fa-school text-2xl"></i></div>
+                    <div><p class="font-bold">Bachillerato Tecnológico</p><p class="text-xs opacity-60">Amor de Dios (2004-2006)</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" data-aos="zoom-in-up">
+            <div class="card-custom bg-slate-900 text-white border-none p-12 md:p-20 text-center relative overflow-hidden !rounded-[4rem]">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-emerald-600/20 opacity-40"></div>
+                <div class="relative z-10">
+                    <h2 class="text-5xl font-black mb-6" data-es="¿Hablamos?" data-en="Let's Talk?"></h2>
+                    <p class="text-slate-400 mb-12 max-w-2xl mx-auto text-xl font-light" data-es="Abierto a retos tecnológicos en arquitectura y seguridad móvil."></p>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <a href="mailto:franparamo87@gmail.com" class="flex items-center gap-4 bg-white text-slate-900 px-10 py-5 rounded-2xl font-bold hover:scale-110 transition-all shadow-xl">
+                            <i class="fas fa-envelope text-blue-600"></i> Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/franparamo87/" target="_blank" class="flex items-center gap-4 bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold hover:scale-110 transition-all shadow-xl">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 text-center text-slate-400 text-[10px] uppercase tracking-[0.3em]">
+        <p>© 2026 Francisco Javier Páramo Muñoz — Madrid</p>
+    </footer>
+
+    <script>
+        setLanguage('es');
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
